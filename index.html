@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="SongYoungJun">
+    <meta name="description" content="YOUNGPOONG BOOKSTORE projects">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimun=1"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:type" content="website"> 
+    <meta property="og:type" content="website">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" href="images/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="images/favicon-32x32.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="hd-wrap">
+            <div class="hd-event-wrap">
+                <div class="hd-event-box">
+                    <img src="images/headerevent.jpg" class="hd-event-img" usemap="#event" alt="헤더이벤트">
+                    <map name="event">
+                        <area shape="rect" coords="1,1,480,59" href="#" target="_blank">
+                        <area shape="rect" coords="960,-1,481,59" href="#" target="_blank">
+                    </map>
+                    <div class="close-btn" onclick="eventBlock()">
+                        <i class="xi-close-min"></i>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="hd-con-wrap">
+                <div class="hd-top-wrap">
+                    <ul class="top-menu-box">
+                        <li class="top-menu"><a href="#">마이페이지</a></li>
+                        <li class="top-menu"><a href="#">로그인</a></li>
+                        <li class="top-menu"><a href="#">회원가입</a></li>
+                        <li class="top-menu"><a href="#">장바구니</a></li>
+                        <li class="top-menu"><a href="#">주문/배송조회</a></li>
+                        <li class="top-menu"><a href="#">고객센터</a></li>
+                    </ul>
+                </div>
+                <div class="hd-bottom-wrap">
+                    <h1 class="logo">
+                        <a href="#">
+                            <img src="images/logo.svg" alt="로고">
+                        </a>
+
+                    </h1>
+                    <form>
+                        <fieldset>
+                            <div class="search-wrap">
+                                <div class="search-box">
+                                    <div class="search-list-box">
+                                        <strong class="search-list-tit">통합검색</strong><i class="xi-caret-down-min"></i>
+                                    </div>
+                                    <div class="search-txt-wrap">
+                                        <input type="search" class="search-txt">
+                                    </div>
+                                    <div class="search-btn-wrap">
+                                        <button class="search-btn"><i class="xi-search"></i></button>
+                                    </div>
+
+
+
+                                </div>
+                                <div class="search-list">
+                                    <ul>
+                                        <li class="list"><span>통합검색</span></li>
+                                        <li class="list"><span>국내도서</span></li>
+                                        <li class="list"><span>외국도서</span></li>
+                                        <li class="list"><span>코믹</span></li>
+                                        <li class="list"><span>리뷰</span></li>
+                                    </ul>
+                                </div>
+                                <div class="record-box">
+                                    <div class="record-ad-box">
+                                        <div class="record-ad">
+                                            <a href="#">
+                                                <span>AD</span>
+                                                <img src="images/record-ad.jpg" alt="광고">
+                                                <span class="record-ad-tit">행성어 서점</span>
+                                                <span class="record-ad-sub">열네 편의 낯설고도 감각적인 이야기</span>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                    <div class="record-list-box">최근 검색어가 없습니다.</div>
+                                    <div class="record-bottom-box">
+                                        <div><a href="#">도움말</a></div>
+
+                                        <div>검색기록삭제</div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <div class="hd-banner-wrap">
+                        <div class="hd-banner-con">
+                            <ul class="hd-slide-box">
+                                <li class="hd-slide"><a href="#"><img src="images/hdeventslide.jpg" alt="헤더배너"></a></li>
+                                <li class="hd-slide"><a href="#"><img src="images/hdeventslide2.jpg" alt="헤더배너"></a>
+                                </li>
+                                <li class="hd-slide"><a href="#"><img src="images/hdeventslide3.jpg" alt="헤더배너"></a>
+                                </li>
+                            </ul>
+                            <div class="hd-btn-wrap">
+                                <p class="num-box"><span class="num-inner">1</span>／3</p>
+                                <button class="hd-btn hd-left">◀</button>
+                                <button class="hd-btn hd-right">▶</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="hd-nav-wrap">
+                <nav class="hd-menu-wrap">
+                    <ul class="hd-menu-box">
+                        <li class="hd-menu"><a href="#">베스트도서</a></li>
+                        <li class="hd-menu"><a href="#">신간도서</a></li>
+                        <li class="hd-menu"><a href="#">국내도서</a></li>
+                        <li class="hd-menu"><a href="#">외국도서</a></li>
+                        <li class="hd-menu"><a href="#">이벤트</a></li>
+                        <li class="hd-menu"><a href="#">문화행사</a></li>
+                        <li class="hd-menu"><a href="#">회원혜택</a></li>
+                        <li class="hd-menu"><a href="#">출석체크</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="main-banner-wrap">
+            <div class="main-banner-inner">
+                <div class="main-ad-wrap">
+                    <div class="main-ad-box1">
+                        <a href="#">
+                            <p>AD</p>
+                            <img src="images/banner-ad1.jpg" alt="배너사이드AD"
+                                style="width: 60px; height: 89px; margin: 0 auto; margin-top: 8px;">
+                            <span>월급을 쪼개서 경제적 자유를 만드는 23가지 전략</span>
+                        </a>
+
+                    </div>
+                    <div class="main-ad-box2">
+                        <a href="#">
+                            <p>AD</p>
+                            <img src="images/banner-ad2.jpg" alt="배너사이드AD"
+                                style="width: 60px; height: 89px; margin: 0 auto; margin-top: 8px;">
+                            <span>성공하는 1%의 투자자는 어떻게 남다른 성과를 내는가?</span>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="main-banner-box">
+                    <button class="banner_btn btn_left"><i class="xi-angle-left"></i></button>
+                    <button class="banner_btn btn_right"><i class="xi-angle-right"></i></button>
+                    <ul class="banner-slide-box">
+                        <li class="banner-slide-con"><a href="#"><img src="images/banner1.jpg" alt="배너"></a></li>
+                        <li class="banner-slide-con"><a href="#"><img src="images/banner2.jpg" alt="배너"></a></li>
+                        <li class="banner-slide-con"><a href="#"><img src="images/banner3.jpg" alt="배너"></a></li>
+                        <li class="banner-slide-con"><a href="#"><img src="images/banner4.jpg" alt="배너"></a></li>
+                        <li class="banner-slide-con"><a href="#"><img src="images/banner5.jpg" alt="배너"></a></li>
+                    </ul>
+                    <div class="banner-dot-box">
+                        <div class="banner_dot" onmouseover="mouseHover(0)"><img src="images/bannerlistimg.jpg" alt="">
+                        </div>
+                        <div class="banner_dot" onmouseenter="mouseHover(1)"><img src="images/bannerlistimg2.jpg"
+                                alt=""></div>
+                        <div class="banner_dot" onmouseenter="mouseHover(2)"><img src="images/bannerlistimg3.jpg"
+                                alt=""></div>
+                        <div class="banner_dot" onmouseenter="mouseHover(3)"><img src="images/bannerlistimg4.jpg"
+                                alt="">
+                        </div>
+                        <div class="banner_dot" onmouseenter="mouseHover(4)"><img src="images/bannerlistimg5.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="notice-wrap">
+            <div class="first-notice-box">
+                <p class="notice-tit">공지사항</p>
+                <p class="notice-con"><a href="#">[인터넷 영풍문고] 11월 카드사 무이자 할부 안내</a></p>
+            </div>
+
+            <div class="second-notice-box">
+                <p class="notice-tit">이벤트 발표</p>
+                <p class="notice-con"><a href="#">[댓글 이벤트] 월요병을 극복하자 파우치&동전지갑 증정 당첨자 안내</a></p>
+            </div>
+            <div class="attention-wrap">
+                <div class="attention-box">
+                    <div class="attention-logo"></div>
+                    <div class="attention-list-box">
+                        <div class="attention-txt">
+                            <p>최근 본 상품이 없습니다.</p>
+                        </div>
+                        <div class="attention-btn-wrap">
+                            <button class="attention-btn attention-left">◀</button>
+                            <span class="attention-num">1</span>
+                            <button class="attention-btn attention-right">▶</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="attention-ad-box">
+                    <a href="#">
+                        <img src="images/basket-ad.jpg" alt="나우드림">
+
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="today-wrap">
+            <div class="today-box">
+                <h2 class="today-tit">오늘의 책</h2>
+
+                <div class="today-slide-wrap">
+                    <div class="today-slide-box">
+                        <div class="today-slide-con">
+                            <a href="#">
+                                <img src="images/today-img1.jpg" alt="오늘의 책1" class="today-img">
+                                <div class="today-con">
+                                    <div class="today-txt-box">
+
+                                        <p class="today-subheading">역사상 가장 많이 팔린 SF</p>
+                                        <p class="today-book">듄1</p>
+                                        <p class="today-price"><strong class="price-tit">인터넷판매가</strong><span
+                                                class="price">22,500원</span></p>
+                                        <p class="today-explanation">1965년 제정된 네뷸러 상의 첫 수상작으로 선정, 다음해 휴고 상을 연이어 수상하며
+                                            베스트셀러에
+                                            등극함으로써
+                                            비평계와 독자들의 동시 찬사를 받은 [듄]은, 1984년에는 거장 데이비드 린치에 의해 영화화되었으며, 2000년에는 미니시리즈로
+                                            제작되어
+                                            에미상을 수상하기도
+                                            하였다. [듄]은 조지 루카스의 「스타워즈」, 미야자키 하야오의 「바람 계곡의 나우시카」와 HBO 「왕좌의 게임」을 포함하여 영화,
+                                            게임,
+                                            음악, 소설 등
+                                            반세기 동안 수많은 서브컬처에 절대적인 영향을 끼친 작품으로 잘 알려져 있다.</p>
+
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="today-slide-con">
+
+                            <a href="#">
+                                <img src="images/today-img2.jpg" alt="오늘의 책2" class="today-img">
+                                <div class="today-con">
+                                    <div class="today-txt-box">
+
+                                        <p class="today-subheading">유아인, 김현주 주연 넷플릭스 지옥 원작도서</p>
+                                        <p class="today-book">지옥1</p>
+                                        <p class="today-price"><strong class="price-tit">인터넷판매가</strong><span
+                                                class="price">13,050원</span></p>
+                                        <p class="today-explanation">어느 날 서울 한복판에서 ‘지옥의 고지’를 받는 사람이 나타난다. 정체를 알 수 없는 존재는
+                                            고지
+                                            대상자에게 ‘이름, 지옥에 간다는 사실, 그리고 지옥에 가기 전까지 남은 시간’을 알려준 뒤 홀연히 사라진다. 그리고 예고된 시간이 오면
+                                            어김없이 지옥의 사자들이 들이닥쳐 고지 대상자를 갈기갈기 찢어죽이고 태워죽인다. 대체 이 세상에 무슨 일이 벌어지고 있는 것일까? 우리가
+                                            발딛고
+                                            살아가는 이 도시에 도래한 『지옥』, 드디어 그 첫번째 세계의 문이 열린다.</p>
+
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="today-slide-con">
+
+                            <a href="#">
+                                <img src="images/today-img3.jpg" alt="오늘의 책3" class="today-img">
+                                <div class="today-con">
+                                    <div class="today-txt-box">
+
+                                        <p class="today-subheading">당신의 모든 것이 메시지다</p>
+                                        <p class="today-book">그냥 하지 말라</p>
+                                        <p class="today-price"><strong class="price-tit">인터넷판매가</strong><span
+                                                class="price">15,300원</span></p>
+                                        <p class="today-explanation">우리는 흔히 ‘미래를 알 수 없다’고 생각하지만, 그렇지 않다. 과거와 지금을 보고, 그
+                                            안에 담긴
+                                            사람들의 욕망을 이해할 수 있으면 미래의 변화를 상당 부분 알 수 있다. 자타공인 대한민국 최고의 데이터 분석가 송길영은 20여 년간
+                                            분석해온
+                                            빅데이터를 바탕으로 사람들의 일상이 어떻게 달라졌고, 생각이 어떻게 변화했는지 추적한다. 그럼으로써 앞으로 일어날 변화의 주요 축, 우리
+                                            사회의
+                                            가치관, 그에 맞는 개인과 조직의 성장문법을 제시한다.</p>
+
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="today-slide-con">
+
+                            <a href="#">
+                                <img src="images/today-img4.jpg" alt="오늘의 책1" class="today-img">
+                                <div class="today-con">
+                                    <div class="today-txt-box">
+
+                                        <p class="today-subheading">한 시대를 풍미했던 베스트셀러의 귀환</p>
+                                        <p class="today-book">거꾸로 읽는 세계사</p>
+                                        <p class="today-price"><strong class="price-tit">인터넷판매가</strong><span
+                                                class="price">15,750원</span></p>
+                                        <p class="today-explanation">1988년 초판 출간 이후 스테디셀러로 굳건히 자리를 지켰던 유시민의 『거꾸로 읽는
+                                            세계사』가 절판
+                                            이후 새 얼굴로 출간됐다. ‘전면개정’이라는 수식이 무색할 정도로 30년 넘게 축적된 정보를 꼼꼼하게 보완하고, 사건에 대한 해석을
+                                            바꿨으며,
+                                            같은 문장 하나 두지 않고 고쳐 쓴 ‘새로운’ 책이다. 그럼에도 제목을 그대로 쓴 이유는 초판에서 보였던 ‘거꾸로 읽는 자세’를 전부
+                                            거둬내지는
+                                            않았기 때문이다. 세계를 보는 편향된 시각에 균형을 맞추려 했고, 여전히 소홀하게 취급받는 몇몇 사건도 비중 있게 다뤘다.</p>
+
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+            <button class="today-btn today-leftBtn"><i class="xi-angle-left"></i></button>
+            <button class="today-btn today-rightBtn"><i class="xi-angle-right"></i></button>
+
+        </div>
+        <div class="new-wrap">
+            <div class="new-box ">
+                <h2 class="new-tit">화제의 신간</h2>
+                <div class="new-inner-txt">
+                    <p class="new-num-box"><span class="new-num-inner">1</span>／3</p>
+                    <div class="new-moreview"><a href="#">＋</a></div>
+                </div>
+                <div class="new-slide-wrap">
+
+                    <div class="new-slide-box on">
+                        <ul>
+                            <li class="new-slide-li">
+
+
+                                <img src="images/new-img.jpg" alt="화제의 신간">
+
+                                <div class="new-img-hover">
+                                    <div class="new-hover-back">
+                                        <div class="bookInfo"><a href="#"><i class="xi-book"></i>도서정보</a></div>
+                                        <div class="basket"><a href="#"><i class="xi-cart"></i> 장바구니</a></div>
+                                        <div class="library"><a href="#"><i class="xi-library"></i> 내 서재</a></div>
+                                    </div>
+
+                                </div>
+
+                                <span>사랑의 근력(걷는사람 시인선49)</span>
+                            </li>
+                            <li class="new-slide-li">
+
+                                <img src="images/new-img2.jpg" alt="화제의 신간">
+                                <div class="new-img-hover">
+                                    <div class="new-hover-back">
+                                        <div class="bookInfo"><a href="#"><i class="xi-book"></i>도서정보</a></div>
+                                        <div class="basket"><a href="#"><i class="xi-cart"></i> 장바구니</a></div>
+                                        <div class="library"><a href="#"><i class="xi-library"></i> 내 서재</a></div>
+                                    </div>
+
+                                </div>
+                                <span>한 폭의 빛</span>
+                            </li>
+                            <li class="new-slide-li">
+
+                                <img src="images/new-img3.jpg" alt="화제의 신간">
+                                <div class="new-img-hover">
+                                    <div class="new-hover-back">
+                                        <div class="bookInfo"><a href="#"><i class="xi-book"></i>도서정보</a></div>
+                                        <div class="basket"><a href="#"><i class="xi-cart"></i> 장바구니</a></div>
+                                        <div class="library"><a href="#"><i class="xi-library"></i> 내 서재</a></div>
+                                    </div>
+
+                                </div>
+                                <span>뿌리주의자(창비시선466)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="new-slide-box">
+                        <ul>
+                            <li class="new-slide-li">
+
+                                <img src="images/new-img4.jpg" alt="화제의 신간">
+                                <div class="new-img-hover">
+                                    <div class="new-hover-back">
+                                        <div class="bookInfo"><a href="#"><i class="xi-book"></i>도서정보</a></div>
+                                        <div class="basket"><a href="#"><i class="xi-cart"></i> 장바구니</a></div>
+                                        <div class="library"><a href="#"><i class="xi-library"></i> 내 서재</a></div>
+                                    </div>
+
+                                </div>
+                                <span>계속할까말까할까말까영상</span>
+                            </li>
+                            <li class="new-slide-li">
+
+                                <img src="images/new-img5.jpg" alt="화제의 신간">
+                                <div class="new-img-hover">
+                                    <div class="new-hover-back">
+                                        <div class="bookInfo"><a href="#"><i class="xi-book"></i>도서정보</a></div>
+                                        <div class="basket"><a href="#"><i class="xi-cart"></i> 장바구니</a></div>
+                                        <div class="library"><a href="#"><i class="xi-library"></i> 내 서재</a></div>
+                                    </div>
+
+                                </div>
+                                <span>날아라 슈퍼보드 세트(전10권)</span>
+                            </li>
+                            <li class="new-slide-li">
+
+                                <img src="images/new-img6.jpg" alt="화제의 신간">
+                                <div class="new-img-hover">
+                                    <div class="new-hover-back">
+                                        <div class="bookInfo"><a href="#"><i class="xi-book"></i>도서정보</a></div>
+                                        <div class="basket"><a href="#"><i class="xi-cart"></i> 장바구니</a></div>
+                                        <div class="library"><a href="#"><i class="xi-library"></i> 내 서재</a></div>
+                                    </div>
+
+                                </div>
+                                <span>디칸카 근교 마을의 야회(을유세계문학전집116)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="new-slide-box">
+                        <ul>
+                            <li class="new-slide-li">
+
+
+                                <img src="images/new-img7.jpg" alt="화제의 신간">
+
+                                <div class="new-img-hover">
+                                    <div class="new-hover-back">
+                                        <div class="bookInfo"><a href="#"><i class="xi-book"></i>도서정보</a></div>
+                                        <div class="basket"><a href="#"><i class="xi-cart"></i> 장바구니</a></div>
+                                        <div class="library"><a href="#"><i class="xi-library"></i> 내 서재</a></div>
+                                    </div>
+
+                                </div>
+
+                                <span>낀 세대 생존법</span>
+                            </li>
+                            <li class="new-slide-li">
+
+                                <img src="images/new-img8.jpg" alt="화제의 신간">
+                                <div class="new-img-hover">
+                                    <div class="new-hover-back">
+                                        <div class="bookInfo"><a href="#"><i class="xi-book"></i>도서정보</a></div>
+                                        <div class="basket"><a href="#"><i class="xi-cart"></i> 장바구니</a></div>
+                                        <div class="library"><a href="#"><i class="xi-library"></i> 내 서재</a></div>
+                                    </div>
+
+                                </div>
+                                <span>투명한 요람 1</span>
+                            </li>
+                            <li class="new-slide-li">
+
+                                <img src="images/new-img9.jpg" alt="화제의 신간">
+                                <div class="new-img-hover">
+                                    <div class="new-hover-back">
+                                        <div class="bookInfo"><a href="#"><i class="xi-book"></i>도서정보</a></div>
+                                        <div class="basket"><a href="#"><i class="xi-cart"></i> 장바구니</a></div>
+                                        <div class="library"><a href="#"><i class="xi-library"></i> 내 서재</a></div>
+                                    </div>
+
+                                </div>
+                                <span>쓰고 싶은 사람을 위한 미스터리 입문</span>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                </div>
+                <button class="new-btn new-leftBtn"><i class="xi-angle-left"></i></button>
+                <button class="new-btn new-rightBtn"><i class="xi-angle-right"></i></button>
+            </div>
+            <div class="ad-box">
+                <a href="#">
+                    <img src="images/ad.jpg" alt="광고이미지">
+                </a>
+            </div>
+
+        </div>
+        <div class="best-wrap">
+            <div class="best-box">
+                <h2 class="best-tit">베스트셀러</h2>
+                <span class="best-day on" onclick="bestListView(0)">주 간</span>
+                <span class="best-day" onclick="bestListView(1)">월 간</span>
+                <div class="best-moreview"><a href="#">＋</a></div>
+                <div class="best-listbox">
+                    <div class="best-inner on" data-value="0">
+                        <div class="best-listcon">
+                            <ul>
+                                <li class="bestbook">
+                                    <a href="#">
+                                        <img src="images/weekbook1.jpg" alt="베스트셀러">
+                                        <p class="ranking">1</p>
+                                    </a>
+                                    <div class="bestbook-txt">
+                                        <p class="bestbook-txt-tit"><a href="#">트렌드 코리아2022</a></p>
+                                        <p class="bestbook-txt-author">김난도</p>
+                                    </div>
+                                </li>
+                                <li class="bestbook">
+                                    <a href="#">
+                                        <img src="images/weekbook2.jpg" alt="베스트셀러">
+                                        <p class="ranking">2</p>
+                                    </a>
+                                    <div class="bestbook-txt">
+                                        <p class="bestbook-txt-tit"><a href="#">달러구트 꿈 백화점</a></p>
+                                        <p class="bestbook-txt-author">이미예</p>
+                                    </div>
+                                </li>
+                                <li class="bestbook">
+                                    <a href="#">
+                                        <img src="images/weekbook3.jpg" alt="베스트셀러">
+                                        <p class="ranking">3</p>
+                                    </a>
+                                    <div class="bestbook-txt">
+                                        <p class="bestbook-txt-tit"><a href="#">오늘 밤 세계에서 이 사람이 사라진다 해도</a></p>
+                                        <p class="bestbook-txt-author">이치조미사키 </p>
+                                    </div>
+                                </li>
+                                <li class="bestbook">
+                                    <a href="#">
+                                        <img src="images/weekbook4.jpg" alt="베스트셀러">
+                                        <p class="ranking">4</p>
+                                    </a>
+                                    <div class="bestbook-txt">
+                                        <p class="bestbook-txt-tit"><a href="#">거꾸로 읽는 세계사 - 전면개정</a></p>
+                                        <p class="bestbook-txt-author">유시민</p>
+                                    </div>
+                                </li>
+                                <li class="bestbook">
+                                    <a href="#">
+                                        <img src="images/weekbook5.jpg" alt="베스트셀러">
+                                        <p class="ranking">5</p>
+                                    </a>
+                                    <div class="bestbook-txt">
+                                        <p class="bestbook-txt-tit"><a href="#">에그박사 5- 자연 생물 관찰 만화</a></p>
+                                        <p class="bestbook-txt-author">에그박사,박송이</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="best-listcon">
+                            <ul>
+                                <li class="bestbook">
+                                    <a href="#">
+                                        <img src="images/weekbook6.jpg" alt="베스트셀러">
+                                        <p class="ranking1">6</p>
+                                    </a>
+                                    <div class="bestbook-txt">
+                                        <p class="bestbook-txt-tit"><a href="#">미드나잇 라이브러리(25만 부 기념 퍼플 에디션)</a></p>
+                                        <p class="bestbook-txt-author">매트헤이그</p>
+                                    </div>
+                                </li>
+                                <li class="bestbook">
+                                    <a href="#">
+                                        <img src="images/weekbook7.jpg" alt="베스트셀러">
+                                        <p class="ranking1">7</p>
+                                    </a>
+                                    <div class="bestbook-txt">
+                                        <p class="bestbook-txt-tit"><a href="#">그냥 하지 말라-당신의 모든 것이 메시지다</a></p>
+                                        <p class="bestbook-txt-author">송길영</p>
+                                    </div>
+                                </li>
+                                <li class="bestbook">
+                                    <a href="#">
+                                        <img src="images/weekbook8.jpg" alt="베스트셀러">
+                                        <p class="ranking1">8</p>
+                                    </a>
+                                    <div class="bestbook-txt">
+                                        <p class="bestbook-txt-tit"><a href="#">이상한 과자 가게 전천당 12</a></p>
+                                        <p class="bestbook-txt-author">히로시마레이코</p>
+                                    </div>
+                                </li>
+                                <li class="bestbook">
+                                    <a href="#">
+                                        <img src="images/weekbook9.jpg" alt="베스트셀러">
+                                        <p class="ranking1">9</p>
+                                    </a>
+                                    <div class="bestbook-txt">
+                                        <p class="bestbook-txt-tit"><a href="#">불편한 편의점</a></p>
+                                        <p class="bestbook-txt-author">김호연</p>
+                                    </div>
+                                </li>
+                                <li class="bestbook">
+                                    <a href="#">
+                                        <img src="images/weekbook10.jpg" alt="베스트셀러">
+                                        <p class="ranking1">10</p>
+                                    </a>
+                                    <div class="bestbook-txt">
+                                        <p class="bestbook-txt-tit"><a href="#">달러구트 꿈 백화점 2</a></p>
+                                        <p class="bestbook-txt-author">이미예</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="best-inner" data-value="1">
+                        <div class="best-listcon">
+                            <ul>
+                                <li class="bestbook">
+                                    <a href="#">
+                                        <img src="images/monthbook1.jpg" alt="베스트셀러">
+                                        <p class="ranking">1</p>
+                                    </a>
+                                    <div class="bestbook-txt">
+                                        <p class="bestbook-txt-tit"><a href="#">트렌드 코리아2022</a></p>
+                                        <p class="bestbook-txt-author">김난도</p>
+                                    </div>
+                                </li>
+                                <li class="bestbook">
+                                    <a href="#">
+                                        <img src="images/monthbook2.jpg" alt="베스트셀러">
+                                        <p class="ranking">2</p>
+                                    </a>
+                                    <div class="bestbook-txt">
+                                        <p class="bestbook-txt-tit"><a href="#">달러구트 꿈 백화점</a></p>
+                                        <p class="bestbook-txt-author">이미예</p>
+                                    </div>
+                                </li>
+                                <li class="bestbook">
+                                    <a href="#">
+                                        <img src="images/monthbook3.jpg" alt="베스트셀러">
+                                        <p class="ranking">3</p>
+                                    </a>
+                                    <div class="bestbook-txt">
+                                        <p class="bestbook-txt-tit"><a href="#">오늘 밤 세계에서 이 사람이 사라진다 해도</a></p>
+                                        <p class="bestbook-txt-author">이치조미사키 </p>
+                                    </div>
+                                </li>
+                                <li class="bestbook">
+                                    <a href="#">
+                                        <img src="images/monthbook4.jpg" alt="베스트셀러">
+                                        <p class="ranking">4</p>
+                                    </a>
+                                    <div class="bestbook-txt">
+                                        <p class="bestbook-txt-tit"><a href="#">미드나잇 라이브러리(25만 부 기념 퍼플 에디션)</a></p>
+                                        <p class="bestbook-txt-author">매트헤이그</p>
+                                    </div>
+                                </li>
+                                <li class="bestbook">
+                                    <a href="#">
+                                        <img src="images/monthbook5.jpg" alt="베스트셀러">
+                                        <p class="ranking">5</p>
+                                    </a>
+                                    <div class="bestbook-txt">
+                                        <p class="bestbook-txt-tit"><a href="#">달러구트 꿈 백화점 2</a></p>
+                                        <p class="bestbook-txt-author">이미예</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="best-listcon">
+                            <ul>
+                                <li class="bestbook">
+                                    <a href="#">
+                                        <img src="images/monthbook6.jpg" alt="베스트셀러">
+                                        <p class="ranking1">6</p>
+                                    </a>
+                                    <div class="bestbook-txt">
+                                        <p class="bestbook-txt-tit"><a href="#">불편한 편의점</a></p>
+                                        <p class="bestbook-txt-author">김호연</p>
+                                    </div>
+                                </li>
+                                <li class="bestbook">
+                                    <a href="#">
+                                        <img src="images/monthbook7.jpg" alt="베스트셀러">
+                                        <p class="ranking1">7</p>
+                                    </a>
+                                    <div class="bestbook-txt">
+                                        <p class="bestbook-txt-tit"><a href="#">거꾸로 읽는 세계사 - 전면개정</a></p>
+                                        <p class="bestbook-txt-author">유시민</p>
+                                    </div>
+                                </li>
+                                <li class="bestbook">
+                                    <a href="#">
+                                        <img src="images/monthbook8.jpg" alt="베스트셀러">
+                                        <p class="ranking1">8</p>
+                                    </a>
+                                    <div class="bestbook-txt">
+                                        <p class="bestbook-txt-tit"><a href="#">그냥 하지 말라-당신의 모든 것이 메시지다</a></p>
+                                        <p class="bestbook-txt-author">송길영</p>
+                                    </div>
+                                </li>
+                                <li class="bestbook">
+                                    <a href="#">
+                                        <img src="images/monthbook9.jpg" alt="베스트셀러">
+                                        <p class="ranking1">9</p>
+                                    </a>
+                                    <div class="bestbook-txt">
+                                        <p class="bestbook-txt-tit"><a href="#">에그박사 5 - 자연 생물 관찰 만화</a></p>
+                                        <p class="bestbook-txt-author">에그박사,박송이</p>
+                                    </div>
+                                </li>
+                                <li class="bestbook">
+                                    <a href="#">
+                                        <img src="images/monthbook10.jpg" alt="베스트셀러">
+                                        <p class="ranking1">10</p>
+                                    </a>
+                                    <div class="bestbook-txt">
+                                        <p class="bestbook-txt-tit"><a href="#">듄 신장판 1</a></p>
+                                        <p class="bestbook-txt-author">프랭크허버트</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="recomend-wrap">
+            <div class="recomend-box">
+                <h2 class="recomend-tit">MD추천</h2>
+                <div class="recomend-inner-txt">
+                    <p class="recomend-num-box"><span class="recomend-num-inner">1</span>／3</p>
+                    <div class="recomend-moreview"><a href="#">＋</a></div>
+                </div>
+                <div class="recomend-slide-wrap">
+                    <div class="recomend-slide-box on">
+                        <ul>
+                            <li class="recomend-slide-li">
+
+
+                                <img src="images/recomend1.jpg" alt="MD추천">
+
+                                <div class="recomend-img-hover">
+                                    <div class="recomend-hover-back">
+                                        <div class="bookInfo"><a href="#"><i class="xi-book"></i>도서정보</a></div>
+                                        <div class="basket"><a href="#"><i class="xi-cart"></i> 장바구니</a></div>
+                                        <div class="library"><a href="#"><i class="xi-library"></i> 내 서재</a></div>
+                                    </div>
+
+                                </div>
+
+                                <span>흔한남매9</span>
+                            </li>
+                            <li class="recomend-slide-li">
+
+                                <img src="images/recomend2.jpg" alt="MD추천">
+                                <div class="recomend-img-hover">
+                                    <div class="recomend-hover-back">
+                                        <div class="bookInfo"><a href="#"><i class="xi-book"></i>도서정보</a></div>
+                                        <div class="basket"><a href="#"><i class="xi-cart"></i> 장바구니</a></div>
+                                        <div class="library"><a href="#"><i class="xi-library"></i> 내 서재</a></div>
+                                    </div>
+
+                                </div>
+                                <span>피터 린치의 투자 이야기(2021최신개정판)</span>
+                            </li>
+                            <li class="recomend-slide-li">
+
+                                <img src="images/recomend3.jpg" alt="MD추천">
+                                <div class="recomend-img-hover">
+                                    <div class="recomend-hover-back">
+                                        <div class="bookInfo"><a href="#"><i class="xi-book"></i>도서정보</a></div>
+                                        <div class="basket"><a href="#"><i class="xi-cart"></i> 장바구니</a></div>
+                                        <div class="library"><a href="#"><i class="xi-library"></i> 내 서재</a></div>
+                                    </div>
+
+                                </div>
+                                <span>주식 투자 절대 원칙</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="recomend-slide-box">
+                        <ul>
+                            <li class="recomend-slide-li">
+
+                                <img src="images/recomend4.jpg" alt="MD추천">
+                                <div class="recomend-img-hover">
+                                    <div class="recomend-hover-back">
+                                        <div class="bookInfo"><a href="#"><i class="xi-book"></i>도서정보</a></div>
+                                        <div class="basket"><a href="#"><i class="xi-cart"></i> 장바구니</a></div>
+                                        <div class="library"><a href="#"><i class="xi-library"></i> 내 서재</a></div>
+                                    </div>
+
+                                </div>
+                                <span>장면들</span>
+                            </li>
+                            <li class="recomend-slide-li">
+
+                                <img src="images/recomend5.jpg" alt="MD추천">
+                                <div class="recomend-img-hover">
+                                    <div class="recomend-hover-back">
+                                        <div class="bookInfo"><a href="#"><i class="xi-book"></i>도서정보</a></div>
+                                        <div class="basket"><a href="#"><i class="xi-cart"></i> 장바구니</a></div>
+                                        <div class="library"><a href="#"><i class="xi-library"></i> 내 서재</a></div>
+                                    </div>
+
+                                </div>
+                                <span>크랭크 팰리스(메이즈 러너 시리즈)</span>
+                            </li>
+                            <li class="recomend-slide-li">
+
+                                <img src="images/recomend6.jpg" alt="MD추천">
+                                <div class="recomend-img-hover">
+                                    <div class="recomend-hover-back">
+                                        <div class="bookInfo"><a href="#"><i class="xi-book"></i>도서정보</a></div>
+                                        <div class="basket"><a href="#"><i class="xi-cart"></i> 장바구니</a></div>
+                                        <div class="library"><a href="#"><i class="xi-library"></i> 내 서재</a></div>
+                                    </div>
+
+                                </div>
+                                <span>임성근의 한끗 쉬운 김치 장아찌</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="recomend-slide-box">
+                        <ul>
+                            <li class="recomend-slide-li">
+
+                                <img src="images/recomend7.jpg" alt="MD추천">
+                                <div class="recomend-img-hover">
+                                    <div class="recomend-hover-back">
+                                        <div class="bookInfo"><a href="#"><i class="xi-book"></i>도서정보</a></div>
+                                        <div class="basket"><a href="#"><i class="xi-cart"></i> 장바구니</a></div>
+                                        <div class="library"><a href="#"><i class="xi-library"></i> 내 서재</a></div>
+                                    </div>
+
+                                </div>
+                                <span>내가 산 주식은 왜 안오를까?</span>
+                            </li>
+                            <li class="recomend-slide-li">
+
+                                <img src="images/recomend8.jpg" alt="MD추천">
+                                <div class="recomend-img-hover">
+                                    <div class="recomend-hover-back">
+                                        <div class="bookInfo"><a href="#"><i class="xi-book"></i>도서정보</a></div>
+                                        <div class="basket"><a href="#"><i class="xi-cart"></i> 장바구니</a></div>
+                                        <div class="library"><a href="#"><i class="xi-library"></i> 내 서재</a></div>
+                                    </div>
+
+                                </div>
+                                <span>행성어 서점</span>
+                            </li>
+                            <li class="recomend-slide-li">
+
+                                <img src="images/recomend9.jpg" alt="MD추천">
+                                <div class="recomend-img-hover">
+                                    <div class="recomend-hover-back">
+                                        <div class="bookInfo"><a href="#"><i class="xi-book"></i>도서정보</a></div>
+                                        <div class="basket"><a href="#"><i class="xi-cart"></i> 장바구니</a></div>
+                                        <div class="library"><a href="#"><i class="xi-library"></i> 내 서재</a></div>
+                                    </div>
+
+                                </div>
+                                <span>수면 혁명-인생이 바뀌는 초단기 수면법</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="recomend-btn recomend-leftBtn"><i class="xi-angle-left"></i></button>
+                <button class="recomend-btn recomend-rightBtn"><i class="xi-angle-right"></i></button>
+            </div>
+            <div class="ad2-box">
+                <a href="#">
+                    <img src="images/ad2.jpg" alt="광고이미지">
+                </a>
+            </div>
+        </div>
+        <div class="ebook-wrap">
+            <a href="#"></a>
+        </div>
+        <div class="theme-wrap clearfix">
+            <h2 class="theme-tit">테마</h2>
+            <div class="theme-moreview"><a href="#">＋</a></div>
+            <ul class="theme-list">
+                <li class="theme theme1">
+                    <a href="#">
+                        <div class="theme-img">
+
+                        </div>
+                        <span>리커버 에디션</span>
+                    </a>
+                </li>
+                <li class="theme theme2">
+                    <a href="#">
+                        <div class="theme-img"></div>
+                        <span>넷플릭스 x 정해인</span>
+                    </a>
+                </li>
+                <li class="theme theme3">
+                    <a href="#">
+                        <div class="theme-img"></div>
+                        <span>김영하 북클럽 추천도서</span>
+                    </a>
+                </li>
+                <li class="theme theme4">
+                    <a href="#">
+                        <div class="theme-img"></div>
+                        <span>PLAY BALL</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <footer class="ft-wrap">
+            <div class="ft-top-wrap">
+                <div class="ft-top-box">
+                    <ul class="ft-top-left">
+
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">광고안내</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">청약철회</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">영상정보관리방침</a></li>
+                        <li><a href="#">이메일 무단 수집거부</a></li>
+                    </ul>
+                    <ul class="ft-top-right">
+                        <li><a href="#"><img src="images/blog.png" alt="블로그"></a></li>
+                        <li><a href="#"><img src="images/facebook.png" alt="페이스북"></a></li>
+                        <li><a href="#"><img src="images/instagram.png" alt="인스타그램"></a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="ft-bottom-box">
+                <div class="ft-bottom-logo"><img src="images/bottomlogo.png" alt="푸터로고"
+                        style="width: 150px; height: 91px;"></div>
+                <div class="ft-bottom-txt">
+                    <p>회사명 : (주)영풍문고 ㅣ대표이사 : 최영일</p>
+                    <address> 소재지 : 서울특별시 강남구 강남대로 542번지 (우)06110</address>
+                    <p>사업자 등록번호 : 773-86-01800 ㅣ 통신판매업 신고번호 : 2020-서울강남-01007 [ 사업자정보확인 ]<br>
+                        개인정보관리 책임자 : 조순제 ㅣ E-mail : customer@ypbooks.co.kr ㅣ 대량주문 : <a
+                            href="tel:02-519-2860">02-519-2860</a></p>
+                    <p class="copyright"> COPYRIGHT © YOUNGPOONG BOOKSTORE INC. ALL RIGHTS RESERVED.</p>
+                </div>
+                <div class="ft-bottom-scm">
+                    <div class="scm-box">
+                        <a href="#">
+                            <span>출판사용 통합관리 시스템</span>
+                            <span>SCM</span>
+                        </a>
+                    </div>
+                    <div class="client-box">
+                        <span>고객센터</span>
+                        <a href="tel:1544-9020">1544-9020</a>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/slideJquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/banner.js"></script>
+</body>
+
+</html>
